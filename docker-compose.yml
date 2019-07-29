@@ -2,7 +2,7 @@ version: '2'
 
 services:
   rabbitmq:
-    image: 'bitnami/rabbitmq:3.7'
+    image: 'ixwolf/bitnami-docker-rabbitmq:3.7'
     ports:
       - '1883:1883'
       - '4369:4369'
